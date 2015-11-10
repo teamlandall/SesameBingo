@@ -1,0 +1,38 @@
+h3 {
+	text-align: center;
+}
+
+#result{
+	max-width: 200px;
+	height: auto;
+}
+
+#try-again{
+	margin-top: 10px;
+}
+
+#character-container p{
+	text-align: center;
+}
+
+#character-row{
+	margin-left: 235px;
+	margin-top: 20px;
+}
+
+#character-row li{
+	display: inline;
+}
+
+#character-row img{
+	max-height: 100px;
+	width: auto;
+}
+
+#generateBtn {
+	margin-top: 20px;
+}
+
+#display p{
+	text-align: center;
+}

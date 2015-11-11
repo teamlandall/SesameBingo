@@ -42,9 +42,9 @@ h3 {
 	text-align: center;
 }
 
-@media(max-width: 400px){
+@media(max-width: 775px){
 	#character-row{
-		margin-left: 25px;
+		margin-left: 110px;
 	}
 
 }

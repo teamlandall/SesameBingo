@@ -41,3 +41,12 @@ h3 {
 #display p{
 	text-align: center;
 }
+
+@media(max-width: 400px){
+	#character-row{
+		margin-left: 25px;
+	}
+
+}
+
+

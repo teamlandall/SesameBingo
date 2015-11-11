@@ -1,34 +1,35 @@
 var app = angular.module('sesameStreetBingo');
 
 app.factory('characterGenerator', function (){
-	var ranNum = 0;
-	return {
-		fromInput: function(){
-			ranNum = Math.floor(Math.random() * 6) + 1;
-			console.log(ranNum);
-		},
-		toDisplay: function(){
+	var faceImg = ["img/elmo.jpeg", 
+				   "img/abby.jpeg", 
+				   "img/cookie.jpeg", 
+				   "img/zoe.jpeg",
+				   "img/ernie.jpeg",
+				   "img/bigBird.jpeg"];
 
-			if (ranNum === 1){
-				return "img/elmo.jpeg";
-			} 
-			if (ranNum === 2){
-				return "img/abby.jpeg";
-			} 
-			if (ranNum === 3){
-				return "img/cookie.jpeg";
-			} 
-			if (ranNum === 4){
-				return "img/zoe.jpeg";
-			} 
-			if (ranNum === 5){
-				return "img/ernie.jpeg";
-			}
-			if (ranNum === 6){
-				return "img/bigBird.jpeg";
-			} 
-		},
-		
+	return {
+		showFace: function(){
+			return faceImg[Math.floor(Math.random() * 6)];
+		} 
 	}
 		
 });
+
+app.factory('letterGenerator', function(){
+  var BINGO = ["img/redB.gif",
+            "img/orangeI.jpg",
+            "img/blueN.jpg",
+            "img/yellowG.jpg",
+            "img/greenO.jpeg"];
+
+    return {
+      showLetter: function(){
+        return BINGO[Math.floor(Math.random()*5)];
+      }
+    }
+});
+
+
+
+

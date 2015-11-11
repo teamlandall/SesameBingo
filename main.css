@@ -2,6 +2,11 @@ h3 {
 	text-align: center;
 }
 
+#letter{
+	width: 200px;
+	height: 200px;
+}
+
 #result{
 	max-width: 200px;
 	height: auto;

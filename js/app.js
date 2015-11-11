@@ -13,18 +13,35 @@ app.config(function($routeProvider){
 
 });
 
-
-
-app.controller('formController', function($scope, characterGenerator){
+app.controller('formController', function($scope, characterGenerator, letterGenerator){
   $scope.submit = function(){
-  	characterGenerator.fromInput();
+    characterGenerator.showFace();
+  } 
+
+  $scope.submit = function(){
+  	letterGenerator.showLetter();
   }  
     
 });
 
-app.controller('displayController', ['characterGenerator', '$scope', function(characterGenerator, $scope){
+app.controller('displayController', ['characterGenerator', 'letterGenerator', '$scope', '$route', function(characterGenerator, letterGenerator, $scope, $route){
+  $scope.reloadRoute = function() {
+    $route.reload();
+  }
+
+  //  $scope.run = function(){
+  //   characterGenerator.showFace();
+  // } 
+
+  // $scope.run = function(){
+  //   letterGenerator.showLetter();
+  // } 
   
-  $scope.result = characterGenerator.toDisplay();
+  $scope.face = characterGenerator.showFace();
+
+  $scope.letter = letterGenerator.showLetter();
+
+
 
 }]);
 
